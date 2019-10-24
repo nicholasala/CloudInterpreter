@@ -1,0 +1,22 @@
+Open3D version 0.7.0
+cloned 23 july 2019
+
+Modified:
+-Open3D/Geometry/PointCloud.h
+-python/geometry/pointcloud.cpp
+-python/visualization/visualizer.cpp
+-python/visualization/viewcontrol.cpp
+
+Added:
+-Open3d/visualization/visualizer/VisualizerWithKeyAndEdit.cpp
+-Open3d/visualization/visualizer/VisualizerWithKeyAndEdit.h
+
+Create pip package from open3d source code:
+
+virtualenv o3dvenv
+source o3dvenv/bin/activate
+cd build
+cmake -DCMAKE_INSTALL_PREFIX=/home/nicholas ..
+make -j$(nproc)
+make install-pip-package
+make pip-package
